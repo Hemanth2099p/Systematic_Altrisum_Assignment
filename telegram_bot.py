@@ -11,8 +11,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Trading bot's API token
-TOKEN = '7202819078:AAEQLlTH-c9TpOl3nMkBGU0rPSJR3c4Pp7o'
-BOT_USERNAME = 'TradeWithPumpBot'
+TOKEN = 'Bot-token'
+BOT_USERNAME = '###TradeWithPumpBot'
 
 # Defining the commands and their descriptions
 commands = {
@@ -29,7 +29,6 @@ try:
         chat_ids = set(json.load(f))#storing chatids for future use cases
 except FileNotFoundError:
     chat_ids = set()
-    chat_ids.add(-1002197665797)
 
 async def start(update: Update, context: CallbackContext):
     """Send a message when the command /start is issued."""
